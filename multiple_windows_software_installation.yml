@@ -1,0 +1,16 @@
+  
+---
+- name:  Multiple Windows Software Installation
+  hosts: all
+ 
+  gather_facts: false
+  tasks:
+    - name: Installing Multiple Softwares
+      win_chocolatey:
+        name : 
+        - git
+        - firefox
+        - atom
+        - teamviewer
+        - vlc
+        state : present
